@@ -1,0 +1,128 @@
+Package: calmate
+================
+
+Version: 0.6.6 [2011-08-01]
+o Added some more test scripts.
+o WORKAROUND: In order for the package to work with the most recent
+  version of R devel, which automatically add namespaces to packages
+  who do not have one, we explicitly have specify that this package
+  should use, for instance, cat() of R.utils (instead of 'base').
+
+
+Version: 0.6.5 [2011-03-18]
+o BUG FIX: calmateByTotalAndFracB() required that the 2nd dimension
+  of argument 'data' had names "total" and "fracB".  Likewise,
+  calmateByThetaAB() required that they were "A" and "B".
+
+
+Version: 0.6.4 [2011-03-12]
+o GENERALIZATION: Now allocateOutputDataSets() for CalMaTeCalibration
+  no longer requires write permissions if the data set already exists.
+o Added argument 'references' to the CalMaTeCalibration constructor.
+o REPRODUCIBLE RESEARCH: Added scripts to process the data and
+  generate the figures used in the CalMaTe manuscript(s).  These
+  scripts are available under testScripts/publications/.
+
+
+Version: 0.6.3 [2010-11-02]
+o Updated the help page for the package itself.
+
+
+Version: 0.6.2 [2010-09-28]
+o Updated the example for the CalMaTeCalibration help page to
+  illustrate how to extract the total copy numbers correctly.
+
+
+Version: 0.6.1 [2010-08-05]
+o ROBUSTNESS: Now calmateByThetaAB() and calmateByTotalAndFracB() 
+  asserts that there are at least two samples.
+o BUG FIX: calmateByTotalAndFracB() assumed that there where enough
+  units and samples so that subsetting would not drop singleton 
+  dimension.  Now we use drop=FALSE everywhere.
+o BUG FIX: calmateByThetaAB() would not work if there was only one unit.
+
+
+Version: 0.6.0 [2010-08-02]
+o Added argument 'refAvgFcn' to calmateByTotalAndFracB() and
+  calmateByThetaAB().  It is used to standardize the total copy number
+  of both SNPs and non-polymorphic loci using the same estimator
+  for the average reference signal.
+
+
+Version: 0.5.2 [2010-08-02]
+o CLEANUP: Dropped obsolete internal calmate() and refineCN() functions.
+
+
+Version: 0.5.1 [2010-07-31]
+o BUG FIX: process() for CalMaTeCalibration would only run one chunk.
+
+
+Version: 0.5.0 [2010-07-30]
+o Renamed CalMaTeNormalization to CalMaTeCalibration.
+
+
+Version: 0.4.2 [2010-07-22]
+o BUG FIX: Now process() for CalMaTeNormalization returns immediately 
+  if there are no units left.
+
+
+Version: 0.4.1 [2010-06-29]
+o Added support for process(..., force=TRUE) in CalMaTeNormalization.
+
+
+Version: 0.4.0 [2010-06-21]
+o Added an early version (really!) of CalMaTeNormalization.
+  It still does not store parameter estimates; only the
+  normalized signals.
+
+
+Version: 0.3.1 [2010-06-19]
+o Now the default CalMaTe method is no longer truncating
+  negative ASCN signals.
+o Added argument 'truncate=FALSE' to internal calmateByThetaAB()
+  and rewrote the code to do the truncation in (CA,CB) space.
+  The truncation is done such that CA+CB is preserved.
+
+
+Version: 0.3.0 [2010-06-18]
+o CLEAN UP: Rewrote calmateByThetaAB() so it is no longer 
+  old using calmate() but a new internal fitCalMaTe().
+  The latter should probably we incorporated "inline" in
+  calmateByThetaAB() to better make use of vectorization.
+
+
+Version: 0.2.2 [2010-06-18]
+o BUG FIX: Now "truncating" by x[x < eps] <- eps (was x[x == 0] <- eps).
+o BUG FIX: A few potential bugs where removed.
+o CLEAN UP: Tidied up the code.
+o CLEAN UP: Removed obsolete files.
+
+
+Version: 0.2.1 [2010-05-19]
+o Added weightedCalMaTeByThetaAB() and weightedCalMaTeByTotalAndFracB().
+  The former replaces weightedCalMaTeByASCN().
+o Added internal thetaAB2TotalAndFracB() and totalAndFracB2ThetaAB().
+o Decreased the package dependencies.  Now aroma.core is
+  only suggested, but not required.
+
+
+Version: 0.2.0 [2010-05-18]
+o Added weightedCalMaTeByASCN() which takes an Jx2xI array
+  of allele-specific signals, where J is the number of SNPs,
+  2 is the number of alleles, and I is the number of samples.
+
+
+Version: 0.1.2 [2010-05-18]
+o CLEAN UP: Source code cleanup and standardization.
+o ROBUSTNESS: Added a redundancy test.
+
+
+Version: 0.1.1 [2010-05-04]
+
+
+Version: 0.1.0 [2010-05-04]
+o Made into an R package.
+
+
+Version: 0.0.1 [2010-05-03]
+o Created.
