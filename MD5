@@ -1,7 +1,8 @@
-629fe26e5957da372100eec9e17766d5 *DESCRIPTION
+65a43aab647512c3ebc656f74849a57e *DESCRIPTION
+aabdc39d537eb1bf30aa855a81ae3cd8 *NAMESPACE
 fee43549336884b50b78f8e574092888 *R/999.NonDocumentedObjects.R
 6e2132582c07100f3612a76bc2cf0f31 *R/999.package.R
-f26a239690f9475e71d4823f899c988c *R/CalMaTeCalibration.R
+d4b70390d43e86b5aa34c4302b968f82 *R/CalMaTeCalibration.R
 3e2ccc11e2c3d659c838ba40ef2125ed *R/calmateByThetaAB.R
 d3f06b8c48e286e74e5007b50bb9de40 *R/calmateByTotalAndFracB.R
 b5aa0e893d90ed81fc4b3b2ae1ee1594 *R/fitCalMaTe.R
@@ -9,7 +10,7 @@ b5aa0e893d90ed81fc4b3b2ae1ee1594 *R/fitCalMaTe.R
 56c01a3daf3dbe8acd5c88f46dd7eceb *R/thetaAB2TotalAndFracB.R
 431d1e888a93a5125b77cc45dd3465ca *R/truncateFracB.R
 5a5b71bc1621855eb8e6ad36f657ee5c *R/truncateThetaAB.R
-1c0da4fc6598a01c70a1c1659e5ad226 *R/zzz.R
+cb195743491e7d9c6702c627650fa478 *R/zzz.R
 a15813019caee8695f069b9a2df6c5f8 *incl/999.missingdocs.txt
 a1fd52bc469113d64fd49ab3ce712e2c *incl/CalMaTeCalibration.Rex
 e859089715aa0f1d3ab2b0a86a91888b *incl/calmateByThetaAB.Rex
@@ -17,7 +18,7 @@ e859089715aa0f1d3ab2b0a86a91888b *incl/calmateByThetaAB.Rex
 15a6f8d37a17ff0d4c2535ab65518bb6 *incl/testScriptCalMaTe1.Rex
 a20664a8aecf107c455bbf7ea90ff1da *incl/testScriptCalMaTe2.Rex
 c119aca6b7b59c6400da950d9aeddf1d *incl/thetaAB2TotalAndFracB.Rex
-fbd3a2acc19b027194d02ba0ef246d30 *inst/NEWS
+d021567dc44c464a2fc317ebcfe0bcc5 *inst/NEWS
 c547539d720033d8a8a8cd8674332bdb *inst/exData/myASCNData.Rbin
 f446511a78e2bd112d76ab938176d32e *inst/exData/oneSNPdata,2x40.Rbin
 2f951fe505af54acff1886da3e848ac0 *inst/exData/thetaAB,100x2x40.Rbin
@@ -26,9 +27,18 @@ f446511a78e2bd112d76ab938176d32e *inst/exData/oneSNPdata,2x40.Rbin
 936c709f68d5e2cff27d8ca6b3c9fd6e *inst/testScripts/publications/CalMaTe/A02.TCGA,CalMaTe,plots.R
 556f4894b9117df7301af7f641a6629a *inst/testScripts/publications/CalMaTe/B01.GSE12702,ASCRMAv2.R
 f4dc35fa9d894eeb696ff7919636d85a *inst/testScripts/publications/CalMaTe/B02.GSE12702,CalMaTe.R
+d65913eb96c6437f5ed4562a7698f310 *inst/testScripts/publications/CalMaTe/R/001.include.R
+68f2afeb5ab36f287bd28a79426798ab *inst/testScripts/publications/CalMaTe/R/001.plots,multiarray.R
+6385a71d8457ba5bb6d583a6eb4e4b4c *inst/testScripts/publications/CalMaTe/R/001.plots,tracks.R
+2ab9e1cd827a3ec396efaecaed0a62ca *inst/testScripts/publications/CalMaTe/R/001.plots.R
+85e62d5812e684b5e5f79c3bd34ccd4c *inst/testScripts/publications/CalMaTe/R/002.datasets.R
+28e6ffabba2141ab86e2422a59b62d9c *inst/testScripts/publications/CalMaTe/R/999.onDone.R
 b9538ff67439f59c4738a1d2adcdd56b *inst/testScripts/publications/CalMaTe/Z01.plots,byChromosome.R
 a33043ba0999b754241caed3f7f93bf9 *inst/testScripts/publications/CalMaTe/Z02.plots,segments.R
 3bf68866472371838e3e672edbfc3259 *inst/testScripts/publications/CalMaTe/Z03.plots,byUnits.R
+b00e8304497d6d0acd167653f550aea2 *inst/testScripts/publications/CalMaTe/dataSets/GSE12702.R
+476626af141f07d6849b259134d2a4df *inst/testScripts/publications/CalMaTe/dataSets/broad.mit.edu_OV.Genome_Wide_SNP_6.12.6.0.R
+46612d83e0e83a57006d5609fe04535f *inst/testScripts/publications/CalMaTe/dataSets/hudsonalpha.org_OV.Human1MDuo.1.1.0.R
 6284d2a60e4e42a6134f4b3956ea5894 *inst/testScripts/system/chipTypes/Mapping250K_Nsp,Sty/20100518a,CRMAv2.R
 3aacf39a0d017b498cc7d3ca8ad16602 *inst/testScripts/system/chipTypes/Mapping250K_Nsp,Sty/20100518b,CalMaTe.R
 c463972857d06e8f662487888e77f5c7 *inst/testScripts/system/chipTypes/Mapping250K_Nsp,Sty/20100620,CalMaTe.R
@@ -37,7 +47,7 @@ c463972857d06e8f662487888e77f5c7 *inst/testScripts/system/chipTypes/Mapping250K_
 633f109617872a7e30a8e8ae7ee87333 *inst/testScripts/widgets/CalMaTe/Z02.plots,segments.R
 5ed08d643c4b433324aee4cf778a189c *man/CalMaTeCalibration.Rd
 eadd58953a9b08b6f6380096c8ffc95f *man/Non-documented_objects.Rd
-674dac36fbc3dfc794ac36b22a8e64c4 *man/calmate-package.Rd
+afb53280ecc541454cf81e3863789d01 *man/calmate-package.Rd
 934f1a7510a0cfe14772f69626c359d1 *man/calmateByThetaAB.array.Rd
 d34380771d113cd2f79324b5dcf0c11d *man/calmateByTotalAndFracB.array.Rd
 751b7bfa2d7a45a42715ffb4d1c414bc *man/fitCalMaTe.matrix.Rd
