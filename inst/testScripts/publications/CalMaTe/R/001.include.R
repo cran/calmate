@@ -19,7 +19,7 @@ setArchiveOption("devEval", TRUE);
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Settings
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-calTags <- c("<none>", "CMTN", "CMTN,refs=N")[-2];
+calTags <- c("<none>", "CMTN,v1", "CMTN,v1,refs=N", "CMTN,v2", "CMTN,v2,refs=N")[-2];
 anTags <- c("dens", "hets", "2Mb");
 
 hetCol <- c("#999999", "gray", "red", "blue", "orange")[1];

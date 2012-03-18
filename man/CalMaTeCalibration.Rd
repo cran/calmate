@@ -34,7 +34,7 @@ extends \link[R.oo]{Object}\cr
   (ASCNs).
  }
 
- \usage{CalMaTeCalibration(data=NULL, tags="*", references=NULL, ...)}
+ \usage{CalMaTeCalibration(data=NULL, tags="*", references=NULL, flavor=c("v2", "v1"), ...)}
 
  \arguments{
    \item{data}{A named \code{\link[base]{list}} with data set named \code{"total"} and
@@ -47,7 +47,10 @@ extends \link[R.oo]{Object}\cr
    \item{references}{An optional \code{\link[base]{numeric}} \code{\link[base]{vector}} specifying which samples
      should be as reference samples for estimating the model parameters.
      If \code{\link[base]{NULL}}, all samples are used.}
-   \item{...}{Arguments passed to calmateByTotalAndFracB or calmateByThetaAB.}
+   \item{flavor}{A \code{\link[base]{character}} string specifying which flavor of the
+     CalMaTe algorithm to use for fitting the model.
+     See \code{\link{fitCalMaTeInternal}} for details.}
+   \item{...}{Additional arguments passed to \code{\link{calmateByTotalAndFracB}}().}
  }
 
  \section{Fields and Methods}{
@@ -74,8 +77,31 @@ asThis, getChecksum, $, $<-, [[, [[<-, as.character, attach, attachLocally, clea
 
  }
 
- \details{
-   ...
+ \section{Reference samples}{
+  In order to estimate the calibration parameters, the model assumes
+  that, for any given SNP, there are a majority of samples that are
+  diploid at that SNP.  Note that it does not have to be the same set
+  of samples for all SNPs.
+
+  By using argument \code{references}, it is possible so specify which
+  samples should be used when estimating the calibration parameters.
+  This is useful when for instance there are several tumor samples with
+  unknown properties as well as a set of normal samples that can be
+  assumed to be diploid.
+
+  Theoretical, a minimum of three reference samples are needed in order
+  for the model to be identifiable.  If less, an error is thrown.
+  However, in practice more reference samples should be used, that is,
+  in the order of at least 6-10 reference samples with a diverse set
+  of genotypes.
+ }
+
+ \section{Flavors}{
+   For backward compatibility, we try to keep all major versions of
+   the CalMaTe algorithm available.  Older versions can be used by
+   specifying argument \code{flavor}.
+   For more information about the different flavors,
+   see \code{\link{fitCalMaTeInternal}}.
  }
 
  \examples{\dontrun{
@@ -144,7 +170,10 @@ plot(gammaN);
 
  \seealso{
    Low-level versions of the CalMaTe method is available
-   via the \code{\link{calmateByThetaAB.array}}() and
-   \code{\link{calmateByTotalAndFracB.array}}() methods.
+   via the \code{\link{calmateByThetaAB}}() and
+   \code{\link{calmateByTotalAndFracB}}() methods.
+
+  For further information on the internal fit functions, see
+  \code{\link{fitCalMaTeInternal}}.
  }
 \keyword{classes}

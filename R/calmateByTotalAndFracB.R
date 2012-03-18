@@ -21,9 +21,8 @@
 #              I is the number of samples.}
 #  \item{references}{A @logical or @numeric @vector specifying which
 #     samples should be used as the reference set.  
-#     By default, all samples are considered.}
-#  \item{...}{Additional arguments passed to 
-#         @seemethod "calmateByThetaAB".}
+#     By default, all samples are considered. If not NULL at least 3 samples.}
+#  \item{...}{Additional arguments passed to @seemethod "calmateByThetaAB".}
 #  \item{refAvgFcn}{(optional) A @function that takes a JxI @numeric @matrix
 #     an argument \code{na.rm} and returns a @numeric @vector of length J.
 #     It should calculate some type of average for each of the J rows, e.g.
@@ -78,8 +77,12 @@ setMethodS3("calmateByTotalAndFracB", "array", function(data, references=NULL, .
   dimnames(data)[[2]] <- c("total", "fracB");
 
   nbrOfSamples <- dim[3];
-  if (nbrOfSamples <= 2) {
-    throw("Argument 'data' contains less than two samples: ", nbrOfSamples);
+  if (nbrOfSamples < 3) {
+    throw("Argument 'data' contains less than three samples: ", nbrOfSamples);
+  }
+
+  if (nbrOfSamples < 3) {
+    throw("Argument 'data' contains less than three samples: ", nbrOfSamples);
   }
 
   # Argument 'references':
@@ -91,18 +94,16 @@ setMethodS3("calmateByTotalAndFracB", "array", function(data, references=NULL, .
       throw("Length of argument 'references' does not match the number of samples in argument 'data': ", length(references), " != ", nbrOfSamples);
     }
     references <- which(references);
-    if (length(references) == 0) {
-      throw("No references samples.");
-    }
   } else if (is.numeric(references)) {
     references <- as.integer(references);
     if (any(references < 1 | references > nbrOfSamples)) {
-      throw(sprintf("Argument 'references' is out of range [1,%d]", nbrOfSamples));
-    }
-    if (length(references) == 0) {
-      throw("No references samples.");
+      throw(sprintf("Argument 'references' is out of range [1,%d]: %d", nbrOfSamples), length(references));
     }
   }
+  if (length(references) < 3) {
+    throw("Argument 'reference' specify less than three reference samples: ", length(references));
+  }
+
   # Argument 'verbose':
   verbose <- Arguments$getVerbose(verbose);
 
@@ -187,6 +188,11 @@ setMethodS3("calmateByTotalAndFracB", "array", function(data, references=NULL, .
 
 ###########################################################################
 # HISTORY:
+# 2011-12-15 [HB]
+# o CLEANUP: Tidied up the validation of argument 'references' and
+#   improved the corresponding error messages.
+# 2011-12-07 [MO]
+# o Number of references has to be at least 3.
 # 2011-03-18 [HB]
 # o BUG FIX: calmateByTotalAndFracB() required that the 2nd dimension
 #   of argument 'data' had names "total" and "fracB".
