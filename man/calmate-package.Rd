@@ -15,7 +15,7 @@
 
 
  \description{
-   Post-calibration of allele-specific copy-number estimates (ASCNs).
+   A multi-array post-processing method of allele-specific copy-number estimates (ASCNs)
  }
 
  \section{Requirements}{
@@ -48,7 +48,7 @@
  }
 
  \references{
-  [1] M. Ortiz-Estevez, A. Aramburu, H. Bengtsson, P. Neuvial and A. Rubio, \emph{CalMaTe: A method and software to improve allele-specific copy number of SNP arrays for downstream segmentation} (submitted)
+  [1] M. Ortiz-Estevez, A. Aramburu, H. Bengtsson, P. Neuvial and A. Rubio, \emph{CalMaTe: A method and software to improve allele-specific copy number of SNP arrays for downstream segmentation}, Bioinformatics, 2012 (in print).
  \cr
  }
 \keyword{package}

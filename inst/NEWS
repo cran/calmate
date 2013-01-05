@@ -1,13 +1,30 @@
 Package: calmate
 ================
 
+Version: 0.10.0 [2013-01-05]
+o Updated package dependencies.
+o Now CalMaTeCalibration implements ParametersInterface.
+o ROBUSTNESS: Now package declares S3 methods in the namespace.
+o CLEANUP: Now packages MASS, matrixStats, R.methodsS3 and
+  R.oo are only imported (not loaded/attached).
+o BUG FIX: Previous version was not compatible with R.filesets 
+  1.9.0 and aroma.core 2.8.0 resulting in "Error: 'sapply' is not
+  an exported object from 'namespace:R.filesets'".  Thanks
+  to Zheng Siyuan (MD Anderson) for reporting on this.
+
+
+Version: 0.9.3 [2012-04-24]
+o Updated package dependencies.
+o Updated references to the CalMaTe manuscript.
+
+
 Version: 0.9.2 [2012-03-18]
 o Updated help("calmate").
 
 
 Version: 0.9.1 [2012-02-23]
 o Now package explicitly imports 'utils' and no longer relies on
-  'R.oo' and/or 'R.utils' for loading it.
+  'R.oo' and/or 'R.utils' for loading 'utils'.
 
 
 Version: 0.9.0 [2012-02-21]
