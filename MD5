@@ -1,6 +1,6 @@
-ec7d0f86fa6e2339875a0fc7c14773c8 *DESCRIPTION
-28d0c94320140280458088e0b3ac885f *NAMESPACE
-3f91b46de78df320f6fb7fb6281696c5 *NEWS
+f8b4688b301a1e5130cafb62b4f42e62 *DESCRIPTION
+e8e1bf68b8187d62b4b9c23a0042eb27 *NAMESPACE
+98f750a2966769ad30bef44cde4d597d *NEWS
 94b4aa1a14cbd40e443d71b1dfb6a35f *R/000.R
 fee43549336884b50b78f8e574092888 *R/999.NonDocumentedObjects.R
 266ca59377a184b82689c21b86db01a5 *R/999.package.R
@@ -46,6 +46,6 @@ e192b1d393079810929eb511f7b0d786 *man/calmateByThetaAB.array.Rd
 06ec0b30ceb62de6709cea5a7befd3f9 *man/fitCalMaTeInternal.Rd
 0730fa89f51da65af0de041bae18e892 *man/thetaAB2TotalAndFracB.array.Rd
 4ccbb03ed67bf0842fab381dbb6c6a1d *tests/calmateByThetaAB.R
-eebe0259e57e8d3ab4f63d7b6a2dcc59 *tests/calmateByTotalAndFracB.R
+dcb053660aa6454d3216aefecfa0be26 *tests/calmateByTotalAndFracB.R
 e7ec3dc8cecee2865f71637377e74d40 *tests/testScriptCalMaTe1.R
-185b2aea95eca7bdc5e664a1e4910ee4 *tests/thetaAB2TotalAndFracB.R
+8c19aafe1ca1a74bb4317553af9f6396 *tests/thetaAB2TotalAndFracB.R
